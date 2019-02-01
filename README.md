@@ -12,22 +12,22 @@ Your ERC-721 Token Symbol: RIN
 
 For starting the development console, run:
 
-#truffle develop#
+# truffle develop
 
 For compiling the contract, inside the development console, run:
 
-#compile#
+# compile
 
 For migrating the contract to the locally running Ethereum network, inside the development console, run:
 
-#migrate --reset#
+# migrate --reset
 
 For running unit tests the contract, inside the development console, run:
 
-#test#
+# test
 
 For running the Front End of the DAPP, open another terminal window and go inside the project directory, and run:
 
-#cd app#
+# cd app
 
-#npm run dev#
+# npm run dev
