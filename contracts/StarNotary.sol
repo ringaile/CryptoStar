@@ -25,7 +25,7 @@ contract StarNotary is ERC721 {
     
     // Create Star using the Struct
     function createStar(string memory _name, uint256 _tokenId) public { // Passing the name and tokenId as a parameters
-        Star memory newStar = Star(_name); // Star is an struct so we are creating a new Star
+        Star memory newStar = Star(_name, "RIN"); // Star is an struct so we are creating a new Star
         tokenIdToStarInfo[_tokenId] = newStar; // Creating in memory the Star -> tokenId mapping
         _mint(msg.sender, _tokenId); // _mint assign the the star with _tokenId to the sender address (ownership)
     }
@@ -58,7 +58,7 @@ contract StarNotary is ERC721 {
     // Implement Task 1 lookUptokenIdToStarInfo
     function lookUptokenIdToStarInfo (uint _tokenId) public view returns (string memory) {
         //1. You should return the Star saved in tokenIdToStarInfo mapping
-        return tokenIdToStarInfo[_tokenId];
+        return tokenIdToStarInfo[_tokenId].name;
     }
 
     // Implement Task 1 Exchange Stars function
@@ -70,8 +70,8 @@ contract StarNotary is ERC721 {
         require(msg.sender == ownerOf(_tokenId1) || msg.sender == ownerOf(_tokenId2));
         address ownerAddress1 = ownerOf(_tokenId1);
         address ownerAddress2 = ownerOf(_tokenId2);
-        transferStar(ownerAddress2, _tokenId1);
-        transferStar(ownerAddress1, _tokenId2);
+        _transferFrom(ownerAddress1, ownerAddress2, _tokenId1);
+        _transferFrom(ownerAddress2, ownerAddress1, _tokenId2);
 
     }
 
@@ -79,8 +79,9 @@ contract StarNotary is ERC721 {
     function transferStar(address _to1, uint256 _tokenId) public {
         //1. Check if the sender is the ownerOf(_tokenId)
         //2. Use the transferFrom(from, to, tokenId); function to transfer the Star
-        require(msg.sender == ownerOf(_tokenId), "You cannot transfer the star You do not own!")
-        transferFrom(msg.sender, _to1, _tokenId);
+        require(msg.sender == ownerOf(_tokenId), "You cannot transfer the star You do not own!");
+        address owner = ownerOf(_tokenId);
+        _transferFrom(owner, _to1, _tokenId);
     }
 
 }
