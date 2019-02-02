@@ -2,7 +2,7 @@
 
 Welcome to Github repository for the Star Notary Blockchain app.
 
-Truffle version: v5.0.2 ;
+Truffle version: v5.0.2 
 
 OpenZeppelin: 2.1.2
 
