@@ -2,10 +2,14 @@
 
 Welcome to Github repository for the Star Notary Blockchain app.
 
-Truffle version: v5.0.2
+Truffle version: v5.0.2 ;
+
 OpenZeppelin: 2.1.2
+
 Your ERC-721 Token Name Ringaile
+
 Your ERC-721 Token Symbol: RIN
+
 “Token Address” on the Rinkeby Network: 0xec54d25FE9cEd87768cf4415d7a0DE16eeb9e140
 
 ## How to use the project?
