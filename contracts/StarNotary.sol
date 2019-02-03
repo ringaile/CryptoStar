@@ -7,6 +7,7 @@ import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol"
 contract StarNotary is ERC721 {
 
     string public symbol;
+    string public tokenName;
 
     // Star data
     struct Star {
@@ -17,6 +18,9 @@ contract StarNotary is ERC721 {
         symbol = _symbol;
     }
 
+    function setname(string memory _tokennName) public {
+        tokenName = _tokennName;
+    }
     // Implement Task 1 Add a name and symbol properties
     // name: Is a short name to your token
     // symbol: Is a short string like 'USD' -> 'American Dollar'
