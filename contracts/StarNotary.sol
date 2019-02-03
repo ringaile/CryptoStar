@@ -6,21 +6,14 @@ import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol"
 // StarNotary Contract declaration inheritance the ERC721 openzeppelin implementation
 contract StarNotary is ERC721 {
 
-    string public symbol;
-    string public tokenName;
+    string public constant symbol = "RIN";
+    string public constant tokenName = "Ringailes Token";
 
     // Star data
     struct Star {
         string name;
     }
 
-    function setSymbol(string memory _symbol) public {
-        symbol = _symbol;
-    }
-
-    function setname(string memory _tokennName) public {
-        tokenName = _tokennName;
-    }
     // Implement Task 1 Add a name and symbol properties
     // name: Is a short name to your token
     // symbol: Is a short string like 'USD' -> 'American Dollar'
