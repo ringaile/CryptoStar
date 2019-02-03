@@ -53,7 +53,7 @@ module.exports = {
     },
     rinkeby: {
       provider: function(){
-        return new HDWalletProvider("luggage ginger gospel zone garbage broken talent inherit release unveil eternal once", "https://rinkeby.infura.io/v3/d70fe3c263c84f79b2f3ee592e1e77d0");
+        return new HDWalletProvider("", "");
       },
       network_id: '4',
       gas: 4500000,
