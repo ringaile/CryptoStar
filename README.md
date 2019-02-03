@@ -10,7 +10,7 @@ Your ERC-721 Token Name Ringaile
 
 Your ERC-721 Token Symbol: RIN
 
-“Token Address” on the Rinkeby Network: 0xec54d25FE9cEd87768cf4415d7a0DE16eeb9e140
+“Token Address” on the Rinkeby Network: 0xA6E0F499f566B08ffce3Ec54de542eBc0C41D9FF
 
 ## How to use the project?
 
