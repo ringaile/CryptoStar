@@ -7,7 +7,7 @@ import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol"
 contract StarNotary is ERC721 {
 
     string public constant symbol = "RIN";
-    string public constant tokenName = "Ringailes Token";
+    string public constant name = "Ringailes Token";
 
     // Star data
     struct Star {
