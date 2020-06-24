@@ -1,4 +1,4 @@
-pragma solidity >=0.4.24;
+pragma solidity ^0.5.0;
 
 //Importing openzeppelin-solidity ERC-721 implemented Standard
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
@@ -78,12 +78,13 @@ contract StarNotary is ERC721 {
     }
 
     // Implement Task 1 Transfer Stars
-    function transferStar(address _to1, uint256 _tokenId) public {
+    function transferStar(address _to1, uint256 _tokenId) public returns (bool){
         //1. Check if the sender is the ownerOf(_tokenId)
         //2. Use the transferFrom(from, to, tokenId); function to transfer the Star
         require(msg.sender == ownerOf(_tokenId), "You cannot transfer the star You do not own!");
         address owner = ownerOf(_tokenId);
         _transferFrom(owner, _to1, _tokenId);
+        return true;
     }
 
 }

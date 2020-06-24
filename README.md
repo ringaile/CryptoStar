@@ -2,9 +2,9 @@
 
 Welcome to Github repository for the Star Notary Blockchain app.
 
-Truffle version: v5.0.2 
+Truffle version: v5.1.31
 
-OpenZeppelin: 2.1.2
+OpenZeppelin: 22.1.3
 
 Your ERC-721 Token Name Ringaile
 
@@ -14,24 +14,19 @@ Your ERC-721 Token Symbol: RIN
 
 ## How to use the project?
 
-For starting the development console, run:
-
-#### truffle develop
-
 For compiling the contract, inside the development console, run:
 
-#### compile
+#### truffle compile
 
 For migrating the contract to the locally running Ethereum network, inside the development console, run:
 
-#### migrate --reset
+#### truffle migrate --reset
 
 For running unit tests the contract, inside the development console, run:
 
-#### test
+#### truffle test
 
-For running the Front End of the DAPP, open another terminal window and go inside the project directory, and run:
+# Rinkeby addresses:
+1. StarNotary.sol 0xeca5eb47ebb52fb8f0839aac482d3b30fdd3346a
 
-#### cd app
-
-#### npm run dev
+2. StarNotaryProxy.sol 0x1f7c8dc4d0803f3493005d43fc3768167c3c7b60
